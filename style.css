@@ -1,0 +1,63 @@
+body {
+  background-image: linear-gradient(#615dad, #ffc8da);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+}
+
+.Table {
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  margin-bottom: auto;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+div .text {
+  background-color: #283e50;
+  padding: 15px;
+}
+
+h1 {
+  font: lighter 40px lobster;
+}
+
+div .Buttons {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+a.Rules {
+  background-color: #1fcca4;
+  padding: 10px;
+}
+
+a.Rules:hover {
+  background-color: #1cbb96;
+}
+
+a.Play {
+  background-color: #0197f6;
+  padding: 10px;
+}
+
+a.Play:hover {
+  background-color: #0090e9;
+}
