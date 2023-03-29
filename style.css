@@ -12,7 +12,7 @@ body {
   text-decoration: none;
 }
 
-.Table {
+.pictext {
   width: 350px;
   margin-left: auto;
   margin-right: auto;
@@ -37,27 +37,27 @@ h1 {
   font: lighter 40px lobster;
 }
 
-div .Buttons {
+div .buttons {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
 }
 
-a.Rules {
+a.rules {
   background-color: #1fcca4;
   padding: 10px;
 }
 
-a.Rules:hover {
+a.rules:hover {
   background-color: #1cbb96;
 }
 
-a.Play {
+a.play {
   background-color: #0197f6;
   padding: 10px;
 }
 
-a.Play:hover {
+a.play:hover {
   background-color: #0090e9;
 }
