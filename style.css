@@ -56,7 +56,7 @@ a.rules:hover {
 a.play {
   background-color: #0197f6;
   padding: 15px;
-  border-top: groove #000000b3;
+  border-top: 1px solid #000000b3;
 }
 
 a.play:hover {
