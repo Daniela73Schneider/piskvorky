@@ -1,16 +1,43 @@
-html {
-  background-image: linear-gradient(#615dad, #ffc8da);
-  height: 100vh;
+*,
+:after,
+:before {
+  box-sizing: border-box;
 }
 
 body {
+  background-image: linear-gradient(#615dad, #ffc8da);
+  height: 100vh;
+
+  /*zkouška tohle nebrat(nefunguje)
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  
   max-width: 80vmin;
   max-height: 500px;
+  
+  Hlavnímu obsahu nastav maximální šířku pomocí max-width: 80vmin. Stránka se tak bude lépe přizpůsobovat širokoúhlým obrazovkám i telefonům na výšku.*/
+
+}
+
+main {
+  max-width: 80vmin;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.h1 {
+  display: block;
+  font: lighter 120px lobster;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: beige;
 }
 
 .user {
@@ -36,20 +63,6 @@ img {
 
 .menu .replayBtn {
   background-color: #0197f6;
-}
-
-.h1 {
-  display: block;
-  box-sizing: border-box;
-  font: lighter 40px lobster;
-}
-
-.menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: beige;
-
 }
 
 .gamefield {
