@@ -50,6 +50,10 @@ button {
   margin: 0 2px;
 }
 
+.innerMenu {
+  display: flex;
+
+}
 
 a.back {
   background-color: #1fcca4;
@@ -93,6 +97,6 @@ a.replay:hover {
 
 button:hover,
 button:focus {
-  opacity: 0.7;
+  opacity: 0.9;
   cursor: pointer;
 }
