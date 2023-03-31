@@ -2,11 +2,13 @@
 :after,
 :before {
   box-sizing: border-box;
+  color: white;
 }
 
 body {
-  background-image: linear-gradient(#615dad, #ffc8da);
-  height: 100vh;
+  background-image: linear-gradient(#615dad, #ffc8da, #615dad);
+  height: 125vh;
+  background-repeat: unset;
 
   /*zkouška tohle nebrat(nefunguje)
   display: flex;
@@ -23,13 +25,15 @@ body {
 
 main {
   max-width: 80vmin;
-  margin: 0 auto;
+  max-height: 80vh;
+  margin: 5% auto;
   text-align: center;
 }
 
-.h1 {
+h1 {
   display: block;
-  font: lighter 120px lobster;
+  font: lighter 35px lobster;
+  margin: 0 auto;
 }
 
 .menu {
@@ -37,16 +41,16 @@ main {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: beige;
 }
 
 .user {
   text-overflow: clip;
+  font: bold 20px sans;
 }
 
 .dot {
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
@@ -59,17 +63,25 @@ img {
 
 .menu button.backBtn {
   background-color: #1cbb96;
+  width: 5vw;
+  height: 5vw;
 }
 
 .menu .replayBtn {
   background-color: #0197f6;
+  width: 5vw;
+  height: 5vw;
 }
 
 .gamefield {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  /*align-items: center;*/
+  height: 200px;
+  margin: 5% auto;
+  position: relative;
+  /*justify-content: center;*/
+
 }
 
 .btnGroup {
@@ -77,9 +89,9 @@ img {
   flex-direction: row;
 }
 
-button {
-  width: 5vw;
-  height: 5vw;
+.gamefield button {
+  width: calc(100% / 10);
+  aspect-ratio: 1 / 1;
   border: 1px solid black;
   margin: 0;
   opacity: 0.5;
