@@ -25,7 +25,7 @@ body {
 
 main {
   max-width: 80vmin;
-  max-height: 80vh;
+  max-height: 100vh;
   margin: 5% auto;
   text-align: center;
 }
@@ -34,6 +34,11 @@ h1 {
   display: block;
   font: lighter 35px lobster;
   margin: 0 auto;
+}
+
+button {
+  height: 8vmin;
+  aspect-ratio: 1/1;
 }
 
 .menu {
@@ -49,8 +54,8 @@ h1 {
 }
 
 .dot {
-  height: 20px;
-  width: 20px;
+  height: 4vmin;
+  aspect-ratio: 1/1;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
@@ -63,25 +68,24 @@ img {
 
 .menu button.backBtn {
   background-color: #1cbb96;
-  width: 5vw;
-  height: 5vw;
+  /* height: 8vmin;
+  aspect-ratio: 1/1;
+*/
 }
 
 .menu .replayBtn {
   background-color: #0197f6;
-  width: 5vw;
-  height: 5vw;
+  /*height: 8vmin;
+  aspect-ratio: 1/1;*/
 }
 
 .gamefield {
   display: flex;
   flex-direction: column;
-  /*align-items: center;*/
-  height: 200px;
+  align-items: center;
+  height: 80vh;
   margin: 5% auto;
   position: relative;
-  /*justify-content: center;*/
-
 }
 
 .btnGroup {
@@ -90,9 +94,6 @@ img {
 }
 
 .gamefield button {
-  width: calc(100% / 10);
-  aspect-ratio: 1 / 1;
-  border: 1px solid black;
-  margin: 0;
+  border: 0.5px solid black;
   opacity: 0.5;
 }
