@@ -46,7 +46,7 @@ div .buttons {
 
 a.rules {
   background-color: #1fcca4;
-  padding: 10px;
+  padding: 15px;
 }
 
 a.rules:hover {
@@ -55,7 +55,8 @@ a.rules:hover {
 
 a.play {
   background-color: #0197f6;
-  padding: 10px;
+  padding: 15px;
+  border-top: groove #000000b3;
 }
 
 a.play:hover {
