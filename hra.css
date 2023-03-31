@@ -9,18 +9,7 @@ body {
   background-image: linear-gradient(#615dad, #ffc8da, #615dad);
   height: 125vh;
   background-repeat: unset;
-
-  /*zkouška tohle nebrat(nefunguje)
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  
-  max-width: 80vmin;
-  max-height: 500px;
-  
-  Hlavnímu obsahu nastav maximální šířku pomocí max-width: 80vmin. Stránka se tak bude lépe přizpůsobovat širokoúhlým obrazovkám i telefonům na výšku.*/
-
+  font-family: sans-serif;
 }
 
 main {
@@ -46,37 +35,42 @@ button {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
-
-.user {
-  text-overflow: clip;
-  font: bold 20px sans;
+  margin-bottom: 5px;
 }
 
 .dot {
-  height: 4vmin;
+  height: 3vmin;
   aspect-ratio: 1/1;
-  background-color: #bbb;
-  border-radius: 50%;
   display: inline-block;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(255, 255, 255);
+  fill: transparent;
+  margin: 0 2px;
 }
 
-img {
-  width: 450px;
-  max-width: 100%;
+
+a.back {
+  background-color: #1fcca4;
+  border-radius: 20%;
+  padding: 1rem;
+  margin: auto 0.4rem;
 }
 
-.menu button.backBtn {
+a.back:hover {
   background-color: #1cbb96;
-  /* height: 8vmin;
-  aspect-ratio: 1/1;
-*/
 }
 
-.menu .replayBtn {
+a.replay {
   background-color: #0197f6;
-  /*height: 8vmin;
-  aspect-ratio: 1/1;*/
+  border-radius: 20%;
+  padding: 1rem;
+  margin: auto 0.4rem;
+}
+
+a.replay:hover {
+  background-color: #0090e9;
 }
 
 .gamefield {
@@ -84,7 +78,6 @@ img {
   flex-direction: column;
   align-items: center;
   height: 80vh;
-  margin: 5% auto;
   position: relative;
 }
 
@@ -96,4 +89,10 @@ img {
 .gamefield button {
   border: 0.5px solid black;
   opacity: 0.5;
+}
+
+button:hover,
+button:focus {
+  opacity: 0.7;
+  cursor: pointer;
 }
