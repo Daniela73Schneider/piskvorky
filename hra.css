@@ -21,12 +21,12 @@ main {
 
 h1 {
   display: block;
-  font: lighter 35px lobster;
+  font: lighter 45px lobster;
   margin: 0 auto;
 }
 
 button {
-  height: 8vmin;
+  height: 7.7vmin;
   aspect-ratio: 1/1;
 }
 
@@ -35,7 +35,7 @@ button {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 5px;
+  margin: 0 10px 8px;
 }
 
 .dot {
