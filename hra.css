@@ -25,11 +25,6 @@ h1 {
   margin: 0 auto;
 }
 
-button {
-  height: 7.7vmin;
-  aspect-ratio: 1/1;
-}
-
 .menu {
   display: flex;
   flex-direction: row;
@@ -95,8 +90,60 @@ a.replay:hover {
   opacity: 0.5;
 }
 
+button {
+  height: 7.7vmin;
+  aspect-ratio: 1/1;
+}
+
 button:hover,
 button:focus {
   opacity: 0.9;
   cursor: pointer;
+}
+
+/*Nachystej si dvě CSS třídy (například board__field--circle a board__field--cross), které políčko dostylují tak, aby se na něm zobrazilo kolečko nebo křížek. Neboj se třídy otestovat tak, že je na zkoušku přidáš tlačítkům přímo v HTML. Po testu je z HTML nezapomeň smazat, protože tyto třídy bude přidávat a odebírat pouze javascript. */
+
+
+button {
+  position: relative;
+  background-color: #fff;
+  border: none;
+}
+
+button.cross::before,
+button.cross::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 60%;
+  border: 1px solid #615dad;
+  box-sizing: border-box;
+  fill: #615dad;
+  transform: translate(-50%, -50%);
+}
+
+button.cross::before {
+  transform: rotate(45deg);
+}
+
+button.cross::after {
+  transform: rotate(-45deg);
+}
+
+
+
+button.cell::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid #615dad;
 }
