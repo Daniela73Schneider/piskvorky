@@ -110,8 +110,8 @@ button {
   border: none;
 }
 
-button.cross::before,
-button.cross::after {
+.cross::before,
+.cross::after {
   content: "";
   display: block;
   position: absolute;
@@ -123,17 +123,17 @@ button.cross::after {
   fill: #615dad;
 }
 
-button.cross::before {
+.cross::before {
   transform: rotate(45deg);
 }
 
-button.cross::after {
+.cross::after {
   transform: rotate(-45deg);
 }
 
 
 
-button.circle::before {
+.circle::before {
   content: "";
   display: block;
   position: absolute;

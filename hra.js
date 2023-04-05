@@ -1,13 +1,35 @@
 console.log('funguju');
-/*
-const cells = document.querySelectorAll('.cell');
+//S každým kliknutím změň hodnotu proměnné currentPlayer na opačnou. Z circle na cross a naopak.
 
-cells.forEach((cell) => {
-  cell.addEventListener('click', () => {
-    if (cell.innerHTML === '') {
-      cell.innerHTML =
-        '<svg width="100" height="100"><circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="transparent"/></svg>';
-    }
+let currentPlayer = 'circle';
+const currentPlayerSymbol = document.getElementById('currentPlayer');
+function nextPlayer() {
+  if (currentPlayer === 'circle') {
+    currentPlayer = 'cross';
+  } else {
+    currentPlayer = 'circle';
+  }
+  updateCurrentPlayerSymbol();
+}
+function updateCurrentPlayerSymbol() {
+  if (currentPlayer === 'circle') {
+    currentPlayerSymbol.innerHTML = '○';
+  } else {
+    currentPlayerSymbol.innerHTML = 'x';
+  }
+}
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+  button.addEventListener('click', (event) => {
+    event.target.classList.add('circle');
   });
-});*/
-let currentPlayer = 'circle'
+});
+/* s child mi to nefunguje, dám jeden circle a konec! zjistit jak to jinak udělat.
+const buttonElm = document.querySelectorAll('button:nth-child(2n)');
+buttonElm.addEventListener('click', (event) =>
+  event.target.classList.add('circle'),
+);
+
+// , else(
+// event.target.classList.add('cross');)
+//});*/
