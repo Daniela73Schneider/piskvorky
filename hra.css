@@ -115,13 +115,12 @@ button.cross::after {
   content: "";
   display: block;
   position: absolute;
-  top: 50%;
+  top: 10%;
   left: 50%;
-  height: 60%;
+  height: 80%;
   border: 1px solid #615dad;
   box-sizing: border-box;
   fill: #615dad;
-  transform: translate(-50%, -50%);
 }
 
 button.cross::before {
@@ -134,7 +133,7 @@ button.cross::after {
 
 
 
-button.cell::before {
+button.circle::before {
   content: "";
   display: block;
   position: absolute;
