@@ -93,6 +93,9 @@ a.replay:hover {
 button {
   height: 7.7vmin;
   aspect-ratio: 1/1;
+  position: relative;
+  background-color: #fff;
+  border: none;
 }
 
 button:hover,
@@ -104,14 +107,8 @@ button:focus {
 /*Nachystej si dvě CSS třídy (například board__field--circle a board__field--cross), které políčko dostylují tak, aby se na něm zobrazilo kolečko nebo křížek. Neboj se třídy otestovat tak, že je na zkoušku přidáš tlačítkům přímo v HTML. Po testu je z HTML nezapomeň smazat, protože tyto třídy bude přidávat a odebírat pouze javascript. */
 
 
-button {
-  position: relative;
-  background-color: #fff;
-  border: none;
-}
-
-.cross::before,
-.cross::after {
+.fieldCross::before,
+.fieldCross::after {
   content: "";
   display: block;
   position: absolute;
@@ -123,17 +120,17 @@ button {
   fill: #615dad;
 }
 
-.cross::before {
+.fieldCross::before {
   transform: rotate(45deg);
 }
 
-.cross::after {
+.fieldCross::after {
   transform: rotate(-45deg);
 }
 
 
 
-.circle::before {
+.fieldCircle::before {
   content: "";
   display: block;
   position: absolute;
