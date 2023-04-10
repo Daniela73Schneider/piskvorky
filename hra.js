@@ -3,7 +3,7 @@ console.log('funguju');
 let currentPlayer = 'circle';
 
 const playerCross = `
-  <svg class = 'cross' viewBox="0 0 20 20" width="20" height="20" style="display: inline-block; border-radius: 50%; fill: transparent ;">
+  <svg class = 'cross' viewBox="0 0 20 20" width="18" height="20" style="display: inline; border-radius: 15%; fill: transparent ;">
     <line x1="0" y1="0" x2="20" y2="20" stroke="white" stroke-width="2"/>
     <line x1="0" y1="20" x2="20" y2="0" stroke="white" stroke-width="2"/>
   </svg>
