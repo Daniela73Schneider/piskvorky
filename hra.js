@@ -24,19 +24,23 @@ const addMark = (event) => {
   if (currentPlayer === 'circle') {
     event.target.classList.add('fieldCircle');
     event.target.disabled = true;
-    const circleElm = document.querySelector('span.dot');
-    console.log(circleElm);
     const playerElm = document.querySelector('span.dot');
     playerElm.innerHTML = playerCross;
     currentPlayer = 'cross';
+    console.log(currentPlayer);
   } else {
     event.target.classList.add('fieldCross');
     event.target.disabled = true;
     const crossElm = document.querySelector('.cross');
     console.log(crossElm);
     crossElm.remove();
+    console.log(currentPlayer);
     currentPlayer = 'circle';
   }
+  const dotElm = document.querySelector('span.dot');
+  dotElm.style.borderColor =
+    currentPlayer === 'cross' ? 'transparent' : 'rgb(255, 255, 255)';
+  console.log(dotElm, 'toto je dotelm');
 };
 
 buttonElm.addEventListener('click', addMark);
