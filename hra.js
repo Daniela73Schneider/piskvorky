@@ -18,21 +18,14 @@ const addMark = (event) => {
     const playerElm = document.querySelector('span.dot');
     playerElm.innerHTML = playerCross;
     currentPlayer = 'cross';
-    console.log(currentPlayer);
   } else {
     event.target.classList.add('fieldCross');
     event.target.disabled = true;
     const crossElm = document.querySelector('.cross');
-    console.log(crossElm);
     crossElm.remove();
-    console.log(currentPlayer);
     currentPlayer = 'circle';
   }
   //The addMark function is called when a button is clicked. It adds the symbol of the current player (circle or cross) to the button and disables it. It also updates the player's symbol in the dot element.
-
-  const dotElm = document.querySelector('span.dot');
-  dotElm.style.borderColor =
-    currentPlayer === 'cross' ? 'transparent' : 'rgb(255, 255, 255)';
 
   const playGame = Array.from(document.querySelectorAll('button')).map(
     (button) => {
@@ -44,6 +37,9 @@ const addMark = (event) => {
       return '_';
     },
   );
+  const dotElm = document.querySelector('span.dot');
+  dotElm.style.borderColor =
+    currentPlayer === 'cross' ? 'transparent' : 'rgb(255, 255, 255)';
 
   const winner = findWinner(playGame);
   if (winner === 'o' || winner === 'x') {
@@ -56,10 +52,42 @@ const addMark = (event) => {
     setTimeout(() => {
       alert('Hra skončila remízou!');
       location.reload();
-    }, 250);
+    }, 300);
+  }
+  nextMove(playGame);
+};
+//TASK n.5
+const nextMove = (playGame) => {
+  if (currentPlayer === 'cross') {
+    fetch('https://piskvorky.czechitas-podklady.cz/api/suggest-next-move', {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json',
+      },
+      body: JSON.stringify({
+        board: playGame,
+        player: 'cross',
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        const { x, y } = data.position;
+        const index = x + y * 10;
+        buttonElm.forEach((button) => {
+          if (
+            button.classList.contains('fieldCircle') ||
+            button.classList.contains('fieldCross')
+          ) {
+            button.disabled = true;
+          } else {
+            button.disabled = false;
+          }
+        });
+
+        buttonElm[index].click();
+      });
   }
 };
-
 const buttonElm = document.querySelectorAll('button');
 buttonElm.forEach((buttonElm) => {
   buttonElm.addEventListener('click', addMark);
